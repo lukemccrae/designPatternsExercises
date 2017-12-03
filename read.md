@@ -1,4 +1,4 @@
-h1 Hello, I am a developer practicing design patterns.
+Hello, I am a developer practicing design patterns.
 
 Using the book Head First Design Patterns I will be learning design patterns using Java and pushing them in this repository. 
 
