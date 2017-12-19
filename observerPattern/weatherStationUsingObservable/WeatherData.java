@@ -3,14 +3,11 @@ import java.util.Observable;
 
 public class WeatherData extends Observable {
 
-  //create an array from all of the items given by the Observer interface.
-  //similar to 'items in item' in angular js repeat
   private ArrayList<Observer> observers;
   private float temperature;
   private float humidity;
   private float pressure;
 
-  //create a new observers ArrayList
   public WeatherData() { }
 
   //add the passed observer to the observers ArrayList
@@ -28,6 +25,7 @@ public class WeatherData extends Observable {
 
   //when the measurements change, notify the observers
   public void measurementsChanged() {
+    //invoke functions in Observers class
     setChanged();
     notifyObservers();
   }
