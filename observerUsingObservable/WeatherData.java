@@ -11,7 +11,7 @@ public class WeatherData extends Observable {
   private float pressure;
 
   //create a new observers ArrayList
-  public WeatherData() {}
+  public WeatherData() { }
 
   //add the passed observer to the observers ArrayList
   public void registerObserver(Observer o) {
@@ -23,13 +23,6 @@ public class WeatherData extends Observable {
     int i = observers.indexOf(o);
     if(i >= 0) {
       observers.remove(i);
-    }
-  }
-
-  //update observer with  what is this for syntax?
-  public void notifyObservers() {
-    for (Observer observer : observers) {
-      observer.update(temperature, humidity, pressure);
     }
   }
 
@@ -46,16 +39,16 @@ public class WeatherData extends Observable {
     this.pressure = pressure;
     measurementsChanged();
   }
-}
+  public float getTemperature() {
+    return temperature;
+  }
 
-public float getTemperature() {
-  return teperature;
-}
+  public float getHumidity() {
+    return humidity;
+  }
 
-public float getHumidity() {
-  return humidity;
-}
+  public float getPressure() {
+    return pressure;
+  }
 
-public float getPressure() {
-  return pressure;
 }
